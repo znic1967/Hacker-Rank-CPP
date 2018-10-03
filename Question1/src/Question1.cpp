@@ -11,9 +11,25 @@
 //write a function to return a copy of the linked list without destructively modifying the original linked list
 
 #include <iostream>
+#include "Node.h"
+#include "LinkedList.h"
 using namespace std;
 
+Node* initializeList(int size, LinkedList &l);
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	LinkedList list;
+	Node* head;
+	head = initializeList(10, list);
+	list.printList();
+	cout<<"Done"<<endl;
 	return 0;
+}
+
+Node* initializeList(int size, LinkedList &l){
+	for (int i=0; i<size; i++){
+		Node *n = new Node();
+		l.insertBack(n);
+		n->setData(i); //initialize data to count up from 0.
+	}
+	return l.getHead(); //returns head of LL
 }

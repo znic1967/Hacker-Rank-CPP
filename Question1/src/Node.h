@@ -21,6 +21,7 @@ public:
 	void setData(int d);
 	void setNext(Node* n);
 	void setRandom(Node* r);
+
 private:
 	int data;
 	Node* next;
