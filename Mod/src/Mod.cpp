@@ -5,6 +5,8 @@ using namespace std;
 
 // A naive method to find modulor multiplicative inverse of
 // 'a' under modulo 'm'
+
+//a^-1 mod m
 int modInverse(int a, int m)
 {
     a = a%m;
@@ -26,7 +28,7 @@ int rsa_d_finder(int e)
 int main()
 {
     int a = 9, m = 26;
-    cout << modInverse(a, m)<<endl;
+    cout << modInverse(7, 18)<<endl;
     cout << rsa_d_finder(3)<<endl;
     return 0;
 }
